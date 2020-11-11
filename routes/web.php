@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/usuario/registrar', function () {
+    return 'Registrar Usuario';
+});
+
+Route::get('/usuario/editar', function () {
+    return 'Editar usuario';
+});
+
