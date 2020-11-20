@@ -7,99 +7,103 @@
     android:layout_height="match_parent"
     android:background="@color/gris_fondo">
 
-    <RelativeLayout
-        android:id="@+id/encabezado"
-        android:layout_width="411dp"
-        android:layout_height="68dp"
-        android:background="@color/black"
-        android:gravity="center"
-        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textTituloVista"
+        <RelativeLayout
+            android:id="@+id/encabezado"
+            android:layout_width="411dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/textTituloVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="Registrar Cuenta"
+                android:textColor="#71DB77"
+                android:textSize="16dp"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="89dp"
+            android:layout_height="71dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/intlok"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/avatar_perfil"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_cambiarfoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/gris_fondo"
             android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
-            android:text="Registrar Cuenta"
+            android:text="Cambiar Foto de Perfil"
+            android:textAllCaps="false"
             android:textColor="#71DB77"
             android:textSize="16dp"
             tools:ignore="MissingConstraints" />
-    </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        app:srcCompat="@drawable/avatar_perfil"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="119dp" />
+        <TextView
+            android:id="@+id/textView_Usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Usuario:"
+            android:textColor="#FFFFFF"
+            tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_cambiarfoto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/gris_fondo"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Cambiar Foto de Perfil"
-        android:textAllCaps="false"
-        android:textColor="#71DB77"
-        android:textSize="16dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="341dp" />
+        <EditText
+            android:id="@+id/estado"
+            android:layout_width="297dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:background="#1affffff"
+            android:inputType="text"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView_Usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Usuario:"
-        android:textColor="#FFFFFF"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="420dp" />
+        <TextView
+            android:id="@+id/textView_Estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Estado:"
+            android:textColor="#FFFFFF"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView_Estado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:text="Estado:"
-        android:textColor="#FFFFFF"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="510dp" />
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_width="297dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center"
+            android:background="#1affffff"
+            android:inputType="text"
+            tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/usuario"
-        android:layout_width="297dp"
-        android:layout_height="33dp"
-        android:background="#1affffff"
-        android:inputType="text"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="453dp" />
-
-    <EditText
-        android:id="@+id/estado"
-        android:layout_width="297dp"
-        android:layout_height="33dp"
-        android:background="#1affffff"
-        android:inputType="text"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="548dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="89dp"
-        android:layout_height="71dp"
-        app:srcCompat="@drawable/intlok"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="622dp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
