@@ -126,7 +126,7 @@
     </RelativeLayout>
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Acepto Terminos y Condiciones"
@@ -145,5 +145,14 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="603dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="89dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/intlok"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="78dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
