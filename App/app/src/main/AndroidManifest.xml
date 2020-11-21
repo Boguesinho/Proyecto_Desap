@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Intlok">
         <activity android:name=".activity_comentarios"></activity>
-        <activity android:name=".activity_detalles_post" />
+
         <activity android:name=".activity_nuevo_post" />
         <activity
             android:name=".MainActivity"

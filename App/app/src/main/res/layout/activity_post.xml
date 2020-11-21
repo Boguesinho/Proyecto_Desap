@@ -16,26 +16,29 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginBottom="10dp"
-            android:gravity="center"
+            android:gravity="left"
             android:orientation="horizontal"
             android:paddingTop="10dp"
             android:weightSum="3">
 
             <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="10dp"
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/gris_fondo"
-                android:src="@drawable/ic_message"
-                android:tint="#B3B3B3" />
+                android:layout_marginRight="20dp"
+                android:layout_weight=".5"
+                android:background="@color/gris_fondo"
+                android:src="@drawable/abc_vector_test" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_intloklogo" />
+                android:text="Post"
+                android:textColor="@color/verde"
+                android:textSize="25dp"
+                android:layout_marginRight="100dp"
+                android:layout_weight="1" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
