@@ -7,30 +7,75 @@
     android:layout_height="match_parent"
     android:background="@color/gris_fondo">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_leftLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="40dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_rigthLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="40dp" />
 
         <RelativeLayout
-            android:id="@+id/encabezado"
-            android:layout_width="411dp"
+            android:id="@+id/encabezadoizq"
+            android:layout_width="80dp"
             android:layout_height="68dp"
             android:layout_gravity="center"
             android:background="@color/black"
             android:gravity="center"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-            <TextView
-                android:id="@+id/textTituloVista"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:text="Registrar Cuenta"
-                android:textColor="#71DB77"
-                android:textSize="16dp"
-                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/encabezadoider"
+            android:layout_width="80dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/encabezado"
+            android:layout_width="251dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/textTituloVista"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center"
+                    android:text="Registrar Cuenta"
+                    android:textColor="#71DB77"
+                    android:textSize="16dp" />
         </RelativeLayout>
 
         <ImageView
@@ -39,16 +84,25 @@
             android:layout_height="71dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            app:srcCompat="@drawable/intlok"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.939"
+            app:srcCompat="@drawable/intlok" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/avatar_perfil"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.171"
+            app:srcCompat="@drawable/avatar_perfil" />
 
         <Button
             android:id="@+id/btn_cambiarfoto"
@@ -62,7 +116,12 @@
             android:textAllCaps="false"
             android:textColor="#71DB77"
             android:textSize="16dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.442" />
 
         <TextView
             android:id="@+id/textView_Usuario"
@@ -72,7 +131,12 @@
             android:fontFamily="@font/roboto_bold"
             android:text="Usuario:"
             android:textColor="#FFFFFF"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.535" />
 
         <EditText
             android:id="@+id/estado"
@@ -82,7 +146,12 @@
             android:layout_marginBottom="30dp"
             android:background="#1affffff"
             android:inputType="text"
-            tools:ignore="MissingConstraints" />
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.752" />
 
         <TextView
             android:id="@+id/textView_Estado"
@@ -92,7 +161,12 @@
             android:fontFamily="@font/roboto_bold"
             android:text="Estado:"
             android:textColor="#FFFFFF"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.661" />
 
         <EditText
             android:id="@+id/usuario"
@@ -101,9 +175,11 @@
             android:layout_gravity="center"
             android:background="#1affffff"
             android:inputType="text"
-            tools:ignore="MissingConstraints" />
-
-    </LinearLayout>
-
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.594" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
