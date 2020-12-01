@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1A1A1A">
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_leftLogin"
@@ -105,7 +107,7 @@
         app:layout_constraintVertical_bias="0.686" />
 
     <EditText
-        android:id="@+id/correo"
+        android:id="@+id/editText_usuarioLogin"
         android:layout_width="297dp"
         android:layout_height="33dp"
         android:layout_gravity="center"
@@ -118,7 +120,7 @@
         app:layout_constraintVertical_bias="0.626" />
 
     <Button
-        android:id="@+id/btn_Registrar"
+        android:id="@+id/btn_IngresarLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

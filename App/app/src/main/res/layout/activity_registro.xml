@@ -179,7 +179,7 @@
         app:layout_constraintVertical_bias="0.608" />
 
     <EditText
-        android:id="@+id/correo"
+        android:id="@+id/txtBlock_correo"
         android:layout_width="297dp"
         android:layout_height="33dp"
         android:layout_gravity="center"
@@ -192,7 +192,7 @@
         app:layout_constraintVertical_bias="0.302" />
 
     <CheckBox
-        android:id="@+id/checkBox_registro"
+        android:id="@+id/checkBox_terminos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -228,7 +228,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#58EB53"
-        android:text="Registrar"
+        android:text="btn_Registrar"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
