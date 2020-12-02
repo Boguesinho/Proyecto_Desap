@@ -1,7 +1,13 @@
 package com.example.intlok;
 
 import android.os.Bundle;
+import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.transition.Transition;
+import android.view.Gravity;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -17,12 +23,21 @@ public class activity_registromain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        Fade fadein= new Fade(Fade.IN);
+        fadein.setDuration(activity_loginmain.DURATION_TRANSITION);
+        fadein.setInterpolator(new DecelerateInterpolator());
+        getWindow().setEnterTransition(fadein);
+
+
+
         setContentView(R.layout.activity_registro);
 
-        correo=(EditText)findViewById(R.id.txtBlock_correo);
-        usuario=(EditText)findViewById(R.id.txtBlock_usuario);
-        password=(EditText)findViewById(R.id.txtBlock_password);
-        passwordConfir=(EditText)findViewById(R.id.txtBlock_password2);
+        correo=(EditText)findViewById(R.id.txtBlock_CorreoRegistro);
+        usuario=(EditText)findViewById(R.id.txtBlock_UsuarioRegistro);
+        password=(EditText)findViewById(R.id.txtBlock_PasswordRegistro);
+        passwordConfir=(EditText)findViewById(R.id.txtBlock_Password2Registro);
 
         btnRegistrar=(Button)findViewById(R.id.btn_Registrar);
 
@@ -47,5 +62,10 @@ public class activity_registromain extends AppCompatActivity {
         });
 
     }
+
+    public void onBlackClicked(View view){
+        finish();
+    }
+
 
 }

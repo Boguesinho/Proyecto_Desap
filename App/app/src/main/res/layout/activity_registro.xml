@@ -93,7 +93,7 @@
         app:srcCompat="@drawable/intlok" />
 
     <EditText
-        android:id="@+id/txtBlock_password2"
+        android:id="@+id/txtBlock_Password2Registro"
         android:layout_width="297dp"
         android:layout_height="33dp"
         android:layout_gravity="center"
@@ -121,7 +121,7 @@
         app:layout_constraintVertical_bias="0.37" />
 
     <EditText
-        android:id="@+id/txtBlock_usuario"
+        android:id="@+id/txtBlock_UsuarioRegistro"
         android:layout_width="297dp"
         android:layout_height="33dp"
         android:layout_gravity="center"
@@ -150,7 +150,7 @@
         app:layout_constraintVertical_bias="0.475" />
 
     <EditText
-        android:id="@+id/txtBlock_password"
+        android:id="@+id/txtBlock_PasswordRegistro"
         android:layout_width="297dp"
         android:layout_height="33dp"
         android:layout_gravity="center"
@@ -179,7 +179,7 @@
         app:layout_constraintVertical_bias="0.608" />
 
     <EditText
-        android:id="@+id/txtBlock_correo"
+        android:id="@+id/txtBlock_CorreoRegistro"
         android:layout_width="297dp"
         android:layout_height="33dp"
         android:layout_gravity="center"
@@ -228,7 +228,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#58EB53"
-        android:text="btn_Registrar"
+        android:text="Registrar"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

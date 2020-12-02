@@ -1,19 +1,31 @@
 package com.example.intlok;
 
+import android.app.ActivityOptions;
 import android.app.VoiceInteractor;
+import android.content.Intent;
 import android.os.Bundle;
+import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.transition.Transition;
+import android.view.Gravity;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityOptionsCompat;
 
 import com.google.android.material.snackbar.Snackbar;
 
 public class activity_loginmain extends AppCompatActivity {
     EditText usuario,password;
-    Button btningresar;
+    Button btningresar,btnRegistrar;
+
+    public static final long DURATION_TRANSITION=1000;
+    boolean band;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,20 +40,75 @@ public class activity_loginmain extends AppCompatActivity {
         btningresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(usuario.getText().toString().isEmpty() && password.getText().toString().isEmpty()){
-                    Toast.makeText(activity_loginmain.this, "Campos vacios", Toast.LENGTH_LONG).show();
-                }
-                else{
-                    if(usuario.getText().toString().isEmpty()){
-                        Toast.makeText(activity_loginmain.this, "Campo usuario vacio", Toast.LENGTH_LONG).show();
+
+                while (band==false) {
+
+                    if(usuario.getText().toString().isEmpty() && password.getText().toString().isEmpty()){
+                        Toast.makeText(activity_loginmain.this, "Campos vacios", Toast.LENGTH_LONG).show();
+                        return;
                     }
-                    if(password.getText().toString().isEmpty()){
-                        Toast.makeText(activity_loginmain.this, "Campo contraseña vacio", Toast.LENGTH_LONG).show();
+                    else{
+                        if(usuario.getText().toString().isEmpty()){
+                            Toast.makeText(activity_loginmain.this, "Campo usuario vacio", Toast.LENGTH_LONG).show(); return;
+                        }
+                        if(password.getText().toString().isEmpty()){
+                            Toast.makeText(activity_loginmain.this, "Campo contraseña vacio", Toast.LENGTH_LONG).show();return;
+                        }
                     }
+                    band=true;
                 }
+                if(band){
+
+                    onFadeClicked(v,true);
+                }
+            }
+        });
+
+        btnRegistrar=(Button)findViewById(R.id.btn_Registrar);
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                onFadeClicked(v,false);
             }
         });
 
         }
 
+    private Transition transition;
+
+    public void onExplodeClicked(View view, boolean band){
+        transition= new Explode();
+        iniciarActividadSecuandaria(band);
+    }
+
+    public void onSlideClicked(View view, boolean band){
+        transition= new Slide(Gravity.START);
+        iniciarActividadSecuandaria(band);
+    }
+
+    public void onFadeClicked(View view, boolean band){
+        transition= new Fade(Fade.OUT);
+        iniciarActividadSecuandaria(band);
+    }
+
+    public void iniciarActividadSecuandaria(boolean band){
+
+        transition.setDuration(DURATION_TRANSITION);
+        transition.setInterpolator(new DecelerateInterpolator());
+
+        getWindow().setExitTransition(transition);
+
+        if(band){
+
+            Intent siguiente = new Intent(this, activity_nuevo_post.class);
+            startActivity(siguiente, ActivityOptionsCompat
+                    .makeSceneTransitionAnimation(this).toBundle());
+        }else{
+
+            Intent siguiente = new Intent(this, activity_registromain.class);
+            startActivity(siguiente, ActivityOptionsCompat
+                    .makeSceneTransitionAnimation(this).toBundle());
+        }
+    }
 }
