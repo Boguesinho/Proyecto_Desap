@@ -25,3 +25,7 @@ Route::get('/usuario/editar', function () {
     return 'Editar usuario';
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
