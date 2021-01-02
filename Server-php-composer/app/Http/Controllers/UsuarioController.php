@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
     use Illuminate\Support\Facades\Hash;
     use Illuminate\Support\Facades\Validator;
     use JWTAuth;
+    use Auth;
     use Tymon\JWTAuth\Exceptions\JWTException;
 
 
@@ -61,5 +62,11 @@ class UsuarioController extends Controller
         $token = JWTAuth::fromUser($user);
 
         return response()->json(compact('user','token'),201);
+    }
+    public function logout(){
+        
+        Auth::guard('api')->logout();
+        $success = 'Sesión cerrada';
+        return compact('success');
     }
 }
