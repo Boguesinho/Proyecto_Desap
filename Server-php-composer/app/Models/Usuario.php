@@ -6,7 +6,7 @@
     use Illuminate\Foundation\Auth\User as Authenticatable;
 
     use Tymon\JWTAuth\Contracts\JWTSubject;
-    
+
 
     //Añadimos la implementación de JWT en nuestro modelo
     class Usuario extends Authenticatable implements JWTSubject
@@ -31,9 +31,6 @@
             'password', 'remember_token',
         ];
 
-        /*
-            Añadiremos estos dos métodos
-        */
         public function getJWTIdentifier()
         {
             return $this->getKey();

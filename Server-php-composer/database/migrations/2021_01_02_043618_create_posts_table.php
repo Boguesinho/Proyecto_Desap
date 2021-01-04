@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('idUsuario');
             $table->foreign('idUsuario')->references('id')->on('usuarios')->onDelete('cascade');
 
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->unsignedBigInteger('idMultimedia');
             $table->foreign('idMultimedia')->references('id')->on('Multimedia')->onDelete('cascade');
 

@@ -20,6 +20,7 @@ class CuentaController extends Controller
         $cuenta->email = $request->input('email');
         $cuenta->telefono = $request->input('telefono');
         $cuenta->genero = $request->input('genero');
+
         $cuenta->save(); //INSERT
 
         return redirect()->route('cuenta', $cuenta);

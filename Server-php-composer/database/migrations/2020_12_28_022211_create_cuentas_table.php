@@ -18,11 +18,15 @@ class CreateCuentasTable extends Migration
             $table->unsignedBigInteger('idUsuario');
             $table->foreign('idUsuario')->references('id')->on('usuarios')->onDelete('cascade');
 
+            $table->unsignedBigInteger('idMultimedia');
+            $table->foreign('idMultimedia')->references('id')->on('multimedia');
+
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('email')->unique();
             $table->string('telefono', 10);
             $table->string('genero', 100)->nullable()->default('Prefiero no decirlo');
+
             $table->timestamps();
         });
     }

@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d15eb94a-fd80-4f33-82b1-e6195b8eaf3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/java/com/example/intlok/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../App/app/src/main/java/com/example/intlok/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/CuentaSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/UsuarioSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PasswordController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Cuenta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Cuenta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_022211_create_cuentas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_022211_create_cuentas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_042350_create_followers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_042350_create_followers_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_043615_create_multimedia_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_013615_create_multimedia_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_043618_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_043618_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_043658_create_comentarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_043658_create_comentarios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +20,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -148,6 +154,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -169,6 +176,9 @@
       <option name="presentableId" value="Default" />
       <updated>1609542521311</updated>
       <workItem from="1609542557689" duration="7044000" />
+      <workItem from="1609643693719" duration="951000" />
+      <workItem from="1609645021548" duration="7607000" />
+      <workItem from="1609725357742" duration="7161000" />
     </task>
     <servers />
   </component>
