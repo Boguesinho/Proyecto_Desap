@@ -8,6 +8,7 @@ import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.transition.Transition;
+import android.util.Base64;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
@@ -18,7 +19,18 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
 
+import com.example.intlok.api.ApiClient;
+import com.example.intlok.api.InterfaceAPI;
+import com.example.intlok.models.LoginRequest;
+import com.example.intlok.models.LoginResponse;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.io.UnsupportedEncodingException;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class activity_loginmain extends AppCompatActivity {
     EditText usuario,password;
@@ -55,11 +67,12 @@ public class activity_loginmain extends AppCompatActivity {
                             Toast.makeText(activity_loginmain.this, "Campo contraseña vacio", Toast.LENGTH_LONG).show();return;
                         }
                     }
+                    checkLogin();
                     band=true;
                 }
                 if(band){
 
-                    onFadeClicked(v,true);
+                    //onFadeClicked(v,true);
                 }
             }
         });
@@ -73,7 +86,43 @@ public class activity_loginmain extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void checkLogin() {
+        LoginRequest loginRequest= new LoginRequest();
+        loginRequest.setUsername(usuario.getText().toString());
+        loginRequest.setPassword(password.getText().toString());
+
+        Call<LoginResponse> loginResponseCall = ApiClient.getUserService().userLogin(loginRequest);
+        loginResponseCall.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if(response.isSuccessful()){
+                    Toast.makeText(activity_loginmain.this,"Login successful", Toast.LENGTH_LONG).show();
+                }else{
+
+                    Toast.makeText(activity_loginmain.this,"Fail successful", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+                Toast.makeText(activity_loginmain.this,"Throwable", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private String createAuthToken(String username, String password){
+        byte [] data= new byte[0];
+        try{
+            data = (username + ":" + password).getBytes("UTF-8");
+        }catch (UnsupportedEncodingException e){
+            e.printStackTrace();
         }
+
+        return "Basic " + Base64.encodeToString(data, Base64.NO_WRAP);
+    }
 
     private Transition transition;
 
