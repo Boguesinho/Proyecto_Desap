@@ -22,6 +22,7 @@ class CuentaSeeder extends Seeder
         $cuenta->email = 'admin@admin.com';
         $cuenta->telefono = '1122334455';
         $cuenta->genero = 'Masculino';
+        $cuenta->info = 'Info prueba user 1';
         $cuenta->save();
 
         $cuenta = new Cuenta();
@@ -32,6 +33,7 @@ class CuentaSeeder extends Seeder
         $cuenta->email = 'admin1@admin.com';
         $cuenta->telefono = '1122334455';
         $cuenta->genero = 'Masculino';
+        $cuenta->info = 'Info prueba user 1';
         $cuenta->save();
 
         $cuenta = new Cuenta();
@@ -42,6 +44,7 @@ class CuentaSeeder extends Seeder
         $cuenta->email = 'admin2@admin.com';
         $cuenta->telefono = '1122334455';
         $cuenta->genero = 'Masculino';
+        $cuenta->info = 'Info prueba user 1';
         $cuenta->save();
     }
 }

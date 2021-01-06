@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d15eb94a-fd80-4f33-82b1-e6195b8eaf3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeders/CuentaSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/UsuarioSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Usuario.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_022211_create_cuentas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_022211_create_cuentas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_042350_create_followers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_042350_create_followers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_043615_create_multimedia_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_013615_create_multimedia_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_043618_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_043618_create_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_043658_create_comentarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_043658_create_comentarios_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CuentaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CuentaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UsuarioSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsuarioSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +173,7 @@
       <workItem from="1609643693719" duration="951000" />
       <workItem from="1609645021548" duration="7607000" />
       <workItem from="1609725357742" duration="7161000" />
+      <workItem from="1609968070749" duration="2843000" />
     </task>
     <servers />
   </component>

@@ -26,6 +26,7 @@ class CreateCuentasTable extends Migration
             $table->string('email')->unique();
             $table->string('telefono', 10);
             $table->string('genero', 100)->nullable()->default('Prefiero no decirlo');
+            $table->string('info');
 
             $table->timestamps();
         });

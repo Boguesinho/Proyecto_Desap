@@ -13,8 +13,17 @@ class CuentaController extends Controller
     }
 
     public function create(Request $request){
+        $rules = [
+            'nombre' => 'required|string',
+            'apellidos' => 'required|string',
+            'email' => 'required|email|unique:usuarios',
+            'telefono' => 'required|max:10',
+            'genero' => 'required|string'
+        ];
+        $this->validate($request, $rules);
 
         $cuenta = new Cuenta();
+        $cuenta->idUsuario = $request->user()->idUsuario;
         $cuenta->nombre = $request->input('nombre');
         $cuenta->apellidos = $request->input('apellidos');
         $cuenta->email = $request->input('email');
@@ -28,19 +37,22 @@ class CuentaController extends Controller
 
     public function edit(Request $request, Cuenta $cuenta){
         $rules = [
-
+            'nombre' => 'required|string',
+            'apellidos' => 'required|string',
+            'email' => 'required|email|unique:usuarios',
+            'telefono' => 'required|max:10',
+            'genero' => 'required|string'
         ];
-        $messages = [
-
-        ];
-        $this->validate($request, $rules, $messages);
+        $this->validate($request, $rules);
 
         //$cuenta->update($request->all());
+        $cuenta->idUsuario = $request->user()->idUsuario;
         $cuenta->nombre = $request->input('nombre');
         $cuenta->apellidos = $request->input('apellidos');
         $cuenta->email = $request->input('email');
         $cuenta->telefono = $request->input('telefono');
         $cuenta->genero = $request->input('genero');
+        $cuenta->info = $request->input('info');
         $cuenta->save(); //UPDATE
 
         return redirect()->route('cuenta', $cuenta);

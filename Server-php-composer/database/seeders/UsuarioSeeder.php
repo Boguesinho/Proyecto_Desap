@@ -16,7 +16,7 @@ class UsuarioSeeder extends Seeder
     public function run()
     {
         $usuario = new Usuario();
-        $usuario->username = 'boguesihno';
+        $usuario->username = 'boguesinho';
         $usuario->password = Hash::make('ola12345');
         $usuario->save();
 
