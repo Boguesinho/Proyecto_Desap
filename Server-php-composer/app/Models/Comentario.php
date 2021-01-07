@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Comentario extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'comentario',
+    ];
+    /**
+     * @var mixed
+     */
+    private $idUsuario;
+    /**
+     * @var mixed
+     */
+    private $idPost;
+    /**
+     * @var mixed
+     */
+    private $comentario;
 }

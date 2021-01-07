@@ -13,6 +13,10 @@ class Cuenta extends Model
     protected $fillable = [
         'nombre', 'apellidos',
     ];
+    /**
+     * @var mixed
+     */
+    private $idUsuario;
 
 
 }

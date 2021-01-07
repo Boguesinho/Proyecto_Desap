@@ -8,25 +8,14 @@
     use Tymon\JWTAuth\Contracts\JWTSubject;
 
 
-    //Añadimos la implementación de JWT en nuestro modelo
     class Usuario extends Authenticatable implements JWTSubject
     {
         use Notifiable;
 
-        /**
-         * The attributes that are mass assignable.
-         *
-         * @var array
-         */
         protected $fillable = [
             'username', 'password',
         ];
 
-        /**
-         * The attributes that should be hidden for arrays.
-         *
-         * @var array
-         */
         protected $hidden = [
             'password', 'remember_token',
         ];

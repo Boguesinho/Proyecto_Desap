@@ -18,7 +18,7 @@ class CreateCuentasTable extends Migration
             $table->unsignedBigInteger('idUsuario');
             $table->foreign('idUsuario')->references('id')->on('usuarios')->onDelete('cascade');
 
-            $table->unsignedBigInteger('idMultimedia');
+            $table->unsignedBigInteger('idMultimedia')->nullable();
             $table->foreign('idMultimedia')->references('id')->on('multimedia');
 
             $table->string('nombre');
@@ -26,7 +26,7 @@ class CreateCuentasTable extends Migration
             $table->string('email')->unique();
             $table->string('telefono', 10);
             $table->string('genero', 100)->nullable()->default('Prefiero no decirlo');
-            $table->string('info');
+            $table->string('info')->nullable();
 
             $table->timestamps();
         });
