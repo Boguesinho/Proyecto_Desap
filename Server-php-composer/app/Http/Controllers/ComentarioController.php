@@ -16,7 +16,7 @@ class ComentarioController extends Controller
         $this->validate($request, $rules);
 
         $comentario = new Comentario();
-        $comentario->idUsuario = $request->user()->idUsuario;
+        $comentario->idUsuario = $request->user()->id;
         $comentario->idPost = $idPost;
         $comentario->comentario = $request->input('comentario');
 
@@ -47,11 +47,14 @@ class ComentarioController extends Controller
 
     }
 
-    public function deleteComentario (Request $request, $idPost, Comentario $comentario){
-        $usuario = $request->user();
-        $idUsuario = $usuario->idUsuario;
+    public function deleteComentario (Request $request, Comentario $comentario){
 
-        DB::table('comentarios')->where('idUsuario', $idUsuario)->where('idPost', $idPost);
+        $comentario->delete();
+
+        return response()->json([
+            'message' => 'Comentario eliminado con éxito'
+        ]);
+
     }
 
     public function getComentarios ($idPost){

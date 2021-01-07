@@ -15,13 +15,13 @@ class FollowerSeeder extends Seeder
     public function run()
     {
         $follower=new Follower();
-        $follower->idFollower = 2;
-        $follower->idUsuario = 1;
+        $follower->idSeguidor = 2;
+        $follower->idSeguido = 1;
         $follower->save();
 
         $follower=new Follower();
-        $follower->idFollower = 3;
-        $follower->idUsuario = 1;
+        $follower->idSeguidor = 3;
+        $follower->idSeguido = 1;
         $follower->save();
     }
 }

@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class CuentaController extends Controller
 {
-    public function index(){
-        $cuenta = Cuenta::all();
-        return compact('cuenta');
-    }
-
     public function create(Request $request){
         $rules = [
             'nombre' => 'required|string',
@@ -64,8 +59,10 @@ class CuentaController extends Controller
         return response()->json([
             'message' => 'Cuenta editada con éxito'
         ]);
-
-
-
     }
+
+        public function getCuenta (Cuenta $idCuenta){
+            $cuenta=Cuenta::find($idCuenta->id);
+            return response()->json($cuenta);
+        }
 }
