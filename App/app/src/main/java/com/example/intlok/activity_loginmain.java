@@ -18,7 +18,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
 
+import com.example.intlok.api.ApiClient;
+import com.example.intlok.models.LoginRequest;
+import com.example.intlok.models.LoginResponse;
 import com.google.android.material.snackbar.Snackbar;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class activity_loginmain extends AppCompatActivity {
     EditText usuario,password;
@@ -59,7 +66,7 @@ public class activity_loginmain extends AppCompatActivity {
                 }
                 if(band){
 
-                    onFadeClicked(v,true);
+                    checkLogin(v);
                 }
             }
         });
@@ -72,8 +79,34 @@ public class activity_loginmain extends AppCompatActivity {
                 onFadeClicked(v,false);
             }
         });
+    }
 
-        }
+    public void checkLogin(View v){
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setUsername(usuario.getText().toString());
+        loginRequest.setPassword(password.getText().toString());
+
+        Call<LoginResponse> loginResponseCall = ApiClient.getUserService().userlogin(loginRequest);
+        loginResponseCall.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if(response.isSuccessful()){
+                    call.toString();
+                    Toast.makeText(activity_loginmain.this, "Exito", Toast.LENGTH_LONG).show();
+                    onFadeClicked(v,true);
+                }else{
+
+                    Toast.makeText(activity_loginmain.this, "Usuario no encontrado", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+
+                Toast.makeText(activity_loginmain.this, "Throwable", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
     private Transition transition;
 
