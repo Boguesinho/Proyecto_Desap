@@ -1,11 +1,7 @@
 package com.example.intlok;
 
 import android.os.Bundle;
-import android.transition.Explode;
 import android.transition.Fade;
-import android.transition.Slide;
-import android.transition.Transition;
-import android.view.Gravity;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
@@ -39,7 +35,7 @@ public class activity_registromain extends AppCompatActivity {
         password=(EditText)findViewById(R.id.txtBlock_PasswordRegistro);
         passwordConfir=(EditText)findViewById(R.id.txtBlock_Password2Registro);
 
-        btnRegistrar=(Button)findViewById(R.id.btn_Registrar);
+        btnRegistrar=(Button)findViewById(R.id.btn_ContinuarRegistro);
 
         terminos=(CheckBox)findViewById(R.id.checkBox_terminos);
 
