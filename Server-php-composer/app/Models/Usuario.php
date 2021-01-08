@@ -30,4 +30,31 @@
             return [];
         }
 
+        //Para acceder a cuenta desde Usuario
+        public function cuenta(){
+            return $this->hasOne(Cuenta::class, 'idUsuario');
+        }
+
+        public function posts(){
+            return $this->hasMany(Post::class, 'idUsuario');
+        }
+
+        public function comentarios(){
+            return $this->hasMany(Comentario::class, 'idUsuario');
+        }
+
+        public function likes(){
+            return $this->hasMany(Like::class, 'idUsuario');
+        }
+
+        public function seguidos(){
+            return $this->belongsToMany(Usuario::class, 'followers', 'idSeguidor', 'idSeguido');
+        }
+
+        public function seguidores(){
+            return $this->belongsToMany(Usuario::class, 'followers', 'idSeguido', 'idSeguidor');
+        }
+
+
+
     }

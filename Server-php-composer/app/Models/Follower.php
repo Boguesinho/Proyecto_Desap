@@ -9,4 +9,5 @@ class Follower extends Model
 {
     use HasFactory;
 
+
 }

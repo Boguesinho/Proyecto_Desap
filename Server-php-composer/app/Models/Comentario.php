@@ -24,4 +24,12 @@ class Comentario extends Model
      * @var mixed
      */
     private $comentario;
+
+    public function post(){
+        return $this->belongsTo(Post::class, 'idPost');
+    }
+
+    public function usuario(){
+        return $this->belongsTo(Usuario::class, 'idUsuario');
+    }
 }
