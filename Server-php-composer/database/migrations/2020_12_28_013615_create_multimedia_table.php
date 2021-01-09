@@ -16,7 +16,6 @@ class CreateMultimediaTable extends Migration
         Schema::create('multimedia', function (Blueprint $table) {
             $table->id();
             $table->string('ruta');
-            
 
             $table->timestamps();
         });

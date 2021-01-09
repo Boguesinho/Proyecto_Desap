@@ -3,21 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d15eb94a-fd80-4f33-82b1-e6195b8eaf3a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comentario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comentario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Cuenta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Cuenta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Follower.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Follower.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Like.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Multimedia.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Multimedia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FollowerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FollowerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_013615_create_multimedia_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_013615_create_multimedia_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_28_022211_create_cuentas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_28_022211_create_cuentas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_02_042350_create_followers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_02_042350_create_followers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/FollowerSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FollowerSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +172,8 @@
       <workItem from="1609645021548" duration="7607000" />
       <workItem from="1609725357742" duration="7161000" />
       <workItem from="1609968070749" duration="28448000" />
-      <workItem from="1610045483986" duration="15975000" />
+      <workItem from="1610045483986" duration="16025000" />
+      <workItem from="1610134449438" duration="8767000" />
     </task>
     <servers />
   </component>

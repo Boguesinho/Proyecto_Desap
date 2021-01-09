@@ -29,8 +29,8 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('{idPost}/getComentarios', [ComentarioController::class, 'getComentarios']);
 
     //Seguidores
+    Route::get('getSeguidores', [FollowerController::class, 'getSeguidores']);
     Route::get('getSeguidos', [FollowerController::class, 'getSeguidos']);
-
 
     //Like
     Route::post('{idPost}/addLike', [LikeController::class, 'addLike']);
