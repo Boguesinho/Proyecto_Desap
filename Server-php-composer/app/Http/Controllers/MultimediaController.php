@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cuenta;
 use App\Models\Multimedia;
 use Illuminate\Http\Request;
+use function Symfony\Component\String\u;
 
 class MultimediaController extends Controller
 {
-    public function subirFotoPerfil(Request $request, $idCuenta){
+    public function subirFotoPerfil(Request $request){
         $rules = [
             'ruta'=>'required|image'
         ];
@@ -17,7 +19,8 @@ class MultimediaController extends Controller
             $multimedia = new Multimedia();
             $multimedia->ruta = $request->file('ruta')->store();
 
-            $cuenta = $idCuenta;
+            $idUsuario = $request->user()->id;
+            $cuenta = Cuenta::where('idUsuario', $idUsuario)->first();
             $cuenta->idMultimedia = $multimedia->id;
 
             $multimedia->save();

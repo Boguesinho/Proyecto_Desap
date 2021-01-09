@@ -32,9 +32,9 @@ class FollowerController extends Controller
         ]);
     }
 
-    public function UnfollowUsuario(Request $request, BigInteger $idSeguido){
-        $seguido = Follower::where('idSeguido', $idSeguido)->get();
-        $seguido->delete();
+    public function unfollowUsuario(Request $request, BigInteger $idSeguido){
+        $idUsuario = Usuario::find($request->user()->id);
+        $seguido = Follower::where('idSeguido', $idSeguido)->where('idSeguidor', $idUsuario)->delete();
         return response()->json([
             'message' => 'Dejaste de seguir al usuario con éxito'
         ]);

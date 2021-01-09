@@ -17,10 +17,17 @@ Route::post('login', [UsuarioController::class, 'authenticate']); //login
 
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('register/cuenta',[CuentaController::class, 'create']);   //Registrar cuenta
+    Route::post('logout',[UsuarioController::class, 'logout']); //Cerrar sesión
 
+    //HomeController
     Route::get('home', [HomeController::class, "index"]);
-    Route::get('{idCuenta}/getCuenta',[CuentaController::class, 'getCuenta']);
-    Route::put('cuenta/edit',[CuentaController::class, 'edit']);
+    Route::get('{username}/buscarUsuario', [HomeController::class, 'buscarUsuario']);
+    Route::get('{idUsuario}/mostrarCuenta', [HomeController::class, 'mostrarCuenta']);
+
+    //Cuenta
+    Route::get('/getCuenta',[CuentaController::class, 'getCuenta']);
+    Route::put('{cuenta}/edit',[CuentaController::class, 'edit']);
+
 
     //Comentarios
     Route::post('{idPost}/addComentario', [ComentarioController::class, 'addComentario']);
@@ -31,6 +38,8 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     //Seguidores
     Route::get('getSeguidores', [FollowerController::class, 'getSeguidores']);
     Route::get('getSeguidos', [FollowerController::class, 'getSeguidos']);
+    Route::post('{idSeguido}/seguirUsuario', [FollowerController::class, 'seguirUsuario']);
+    Route::delete('{idSeguido}/unfollowUsuario', [FollowerController::class, 'unfollowUsuario']);
 
     //Like
     Route::post('{idPost}/addLike', [LikeController::class, 'addLike']);
@@ -38,12 +47,14 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('{idPost}/getNumLikes', [LikeController::class, 'getNumLikes']);
 
     //Post
+    Route::post('{idMultimedia}/createPost', [PostController::class, 'createPost']);
+    Route::put('{idMultimedia}/{post}/editPost', [PostController::class, 'editPost']);
+    Route::delete('{post}/deletePost', [PostController::class, 'deletePost']);
 
 
     //Multimedia
 
 
-    Route::post('logout',[UsuarioController::class, 'logout']);
 });
 
 
