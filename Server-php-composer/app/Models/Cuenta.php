@@ -13,10 +13,13 @@ class Cuenta extends Model
     protected $fillable = [
         'nombre', 'apellidos',
     ];
-    /**
-     * @var mixed
-     */
-    private $idUsuario;
 
+    public function usuario(){
+        return $this->belongsTo(Usuario::class, 'idUsuario');
+    }
+
+    public function multimedia(){
+        return $this->belongsTo(Multimedia::class, 'idMultimedia');
+    }
 
 }

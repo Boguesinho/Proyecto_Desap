@@ -19,7 +19,7 @@ class CreateFollowersTable extends Migration
             $table->unsignedBigInteger('idSeguido');
 
             $table->foreign('idSeguidor')->references('id')->on('usuarios');
-            $table->foreign('idSeguido')->references('id')->on('usuarios')->onDelete('cascade');
+            $table->foreign('idSeguido')->references('id')->on('usuarios');
             $table->timestamps();
         });
     }

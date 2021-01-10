@@ -47,7 +47,7 @@ class UsuarioController extends Controller
     {
             $validator = Validator::make($request->all(), [
             'username' => 'required|string|max:255',
-            'password' => 'required|string|min:6',
+            'password' => 'required|string|min:6|confirmed',
         ]);
 
         if($validator->fails()){
@@ -64,7 +64,7 @@ class UsuarioController extends Controller
         return response()->json(compact('user','token'),201);
     }
     public function logout(){
-        
+
         Auth::guard('api')->logout();
         $success = 'Sesión cerrada';
         return compact('success');

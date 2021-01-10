@@ -2,27 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cuenta;
+use App\Models\Usuario;
+use Brick\Math\BigInteger;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('jwt');
+    public function buscarUsuario(string $username){
+        $usuario=Usuario::where('username', 'like', $username)->first();
+        return $usuario;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return ["Message", "Hellos World"];
+    public function mostrarCuenta(BigInteger $idUsuario){
+        $cuenta = Cuenta::where('idUsuario', $idUsuario)->first();
+        return $cuenta;
     }
+
+
+
 }

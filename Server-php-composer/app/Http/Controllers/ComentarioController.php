@@ -35,7 +35,7 @@ class ComentarioController extends Controller
         ];
         $this->validate($request, $rules);
 
-        $comentario->idUsuario = $request->user()->idUsuario;
+        $comentario->idUsuario = $request->user()->id;
         $comentario->idPost = $idPost;
         $comentario->comentario = $request->input('comentario');
 
