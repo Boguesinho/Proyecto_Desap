@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Intlok">
         <activity android:name=".activity_comentarios"></activity>
+        <activity android:name=".activity_registromain"></activity>
+        <activity android:name=".activity_registrocontinuacion"></activity>
 
         <activity android:name=".activity_nuevo_post" />
         <activity
