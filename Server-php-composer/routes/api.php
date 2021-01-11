@@ -28,7 +28,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('/getCuenta',[CuentaController::class, 'getCuenta']);
     Route::put('{cuenta}/edit',[CuentaController::class, 'edit']);
 
-
     //Comentarios
     Route::post('{idPost}/addComentario', [ComentarioController::class, 'addComentario']);
     Route::put('{idPost}/{comentario}/editComentario', [ComentarioController::class, 'editComentario']);
@@ -53,13 +52,11 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 
 
     //Multimedia
+    Route::post('subirFotoPerfil', [MultimediaController::class, 'subirFotoPerfil']);
+    Route::post('{post}/subirFotoPost', [MultimediaController::class, 'subirFotoPost']);
 
 
 });
-
-
-
-
 
     /*
     Route::get('user',[UsuarioController::class, 'getAuthenticatedUser']);

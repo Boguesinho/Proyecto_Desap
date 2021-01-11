@@ -10,7 +10,11 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function getPostSeguidos(Follower $idSeguido){
+    public function getPosts(BigInteger $idSeguido){
+
+    }
+
+    public function misPosts(Request $request){
 
     }
 

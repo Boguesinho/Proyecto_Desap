@@ -10,7 +10,6 @@ namespace App\Http\Controllers;
     use Auth;
     use Tymon\JWTAuth\Exceptions\JWTException;
 
-
 class UsuarioController extends Controller
 {
     public function authenticate(Request $request)
