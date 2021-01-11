@@ -8,6 +8,7 @@ import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
 import android.transition.Transition;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
@@ -81,6 +82,8 @@ public class activity_loginmain extends AppCompatActivity {
         });
     }
 
+    private static String token;
+
     public void checkLogin(View v){
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setUsername(usuario.getText().toString());
@@ -91,7 +94,8 @@ public class activity_loginmain extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if(response.isSuccessful()){
-                    call.toString();
+                    token=response.body().getToken();
+                    Log.d("STATE", token);
                     Toast.makeText(activity_loginmain.this, "Exito", Toast.LENGTH_LONG).show();
                     onFadeClicked(v,true);
                 }else{

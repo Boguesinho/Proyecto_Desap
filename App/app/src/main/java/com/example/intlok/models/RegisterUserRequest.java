@@ -1,15 +1,8 @@
 package com.example.intlok.models;
 
-public class Usuario {
-    private int idUsuario;
-
-    public int getIdUsuario() {
-        return idUsuario;
-    }
-
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
-    }
+public class RegisterUserRequest {
+    private String username;
+    private String password;
 
     public String getUsername() {
         return username;
@@ -26,8 +19,4 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    private String username;
-    private String password;
-
 }
