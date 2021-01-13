@@ -26,12 +26,12 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 
     //Cuenta
     Route::get('/getCuenta',[CuentaController::class, 'getCuenta']);
-    Route::put('{cuenta}/edit',[CuentaController::class, 'edit']);
+    Route::put('{idCuenta}/edit',[CuentaController::class, 'edit']);
 
     //Comentarios
     Route::post('{idPost}/addComentario', [ComentarioController::class, 'addComentario']);
-    Route::put('{idPost}/{comentario}/editComentario', [ComentarioController::class, 'editComentario']);
-    Route::delete('{comentario}/deleteComentario', [ComentarioController::class, 'deleteComentario']);
+    Route::put('{idPost}/{idComentario}/editComentario', [ComentarioController::class, 'editComentario']);
+    Route::delete('{idComentario}/deleteComentario', [ComentarioController::class, 'deleteComentario']);
     Route::get('{idPost}/getComentarios', [ComentarioController::class, 'getComentarios']);
 
     //Seguidores
@@ -46,16 +46,17 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('{idPost}/getNumLikes', [LikeController::class, 'getNumLikes']);
 
     //Post
-    Route::post('{idMultimedia}/createPost', [PostController::class, 'createPost']);
-    Route::put('{idMultimedia}/{post}/editPost', [PostController::class, 'editPost']);
-    Route::delete('{post}/deletePost', [PostController::class, 'deletePost']);
+    Route::post('/createPost', [PostController::class, 'createPost']);
+    Route::put('{idPost}/editPost', [PostController::class, 'editPost']);
+    Route::delete('{idPost}/deletePost', [PostController::class, 'deletePost']);
     Route::get('misPosts',[PostController::class,'misPosts']);
     Route::get('getPostSeguidos', [PostController::class, 'getPostSeguidos']);
 
 
     //Multimedia
     Route::post('subirFotoPerfil', [MultimediaController::class, 'subirFotoPerfil']);
-    Route::post('{post}/subirFotoPost', [MultimediaController::class, 'subirFotoPost']);
+
+    //Route::post('{post}/subirFotoPost', [MultimediaController::class, 'subirFotoPost']);
 
 
 });

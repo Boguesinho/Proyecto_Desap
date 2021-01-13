@@ -14,7 +14,7 @@ class HomeController extends Controller
         return $usuario;
     }
 
-    public function mostrarCuenta(BigInteger $idUsuario){
+    public function mostrarCuenta(int $idUsuario){
         $cuenta = Cuenta::where('idUsuario', $idUsuario)->first();
         return $cuenta;
     }

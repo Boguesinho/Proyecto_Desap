@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Follower;
+use App\Models\Multimedia;
 use App\Models\Post;
 use App\Models\Usuario;
 use Brick\Math\BigInteger;
@@ -23,16 +24,24 @@ class PostController extends Controller
         return response()->json($posts);
     }
 
-    public function createPost(Request $request, BigInteger $idMultimedia){
+    public function createPost(Request $request){
         $rules = [
-            'descripcion'=>'required|string'
+            'descripcion'=>'required|string',
+            'ruta'=>'required|image'
         ];
         $this->validate($request, $rules);
 
         $post = new Post();
         $post->idUsuario = $request->user()->id;
         $post->descripcion = $request->input('descripcion');
-        $post->idMultimedia = $idMultimedia;
+
+        if ($request->hasFile("ruta")) {
+            $multimedia = new Multimedia();
+            $multimedia->ruta = $request->file('ruta')->store();
+            $multimedia->save();
+        }
+
+        $post->idMultimedia = $multimedia->id;
         $post->save();
 
         return response()->json([
@@ -40,15 +49,22 @@ class PostController extends Controller
         ]);
     }
 
-    public function editPost(Request $request, BigInteger $idMultimedia, Post $post){
+    public function editPost(Request $request, int $idpost){
         $rules = [
-            'descripcion'=>'required|string'
+            'descripcion'=>'required|string',
+            'ruta'=>'required|image'
         ];
         $this->validate($request, $rules);
 
+        $post=Post::find($idpost);
         $post->idUsuario = $request->user()->id;
         $post->descripcion = $request->input('descripcion');
-        $post->idMultimedia = $idMultimedia;
+        if ($request->hasFile("ruta")) {
+            $multimedia = Multimedia::find($post->idMultimedia);
+            $multimedia->ruta = $request->file('ruta')->store();
+            $multimedia->save();
+        }
+        $post->idMultimedia = $multimedia->id;
         $post->save();
 
         return response()->json([
@@ -56,7 +72,8 @@ class PostController extends Controller
         ]);
     }
 
-    public function deletePost(Post $post){
+    public function deletePost(int $idpost){
+        $post=Post::find($idpost);
         $post->delete();
         return response()->json([
             'message' => 'Post eliminado con éxito'

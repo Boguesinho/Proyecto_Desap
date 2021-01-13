@@ -20,7 +20,7 @@ class FollowerController extends Controller
         return $seguidos->seguidos;
     }
 
-    public function seguirUsuario(Request $request, BigInteger $idSeguido){
+    public function seguirUsuario(Request $request, int $idSeguido){
         $usuario = Usuario::find($request->user()->id);
         $seguido = new Follower();
         $seguido->idSeguidor = $usuario;
@@ -32,7 +32,7 @@ class FollowerController extends Controller
         ]);
     }
 
-    public function unfollowUsuario(Request $request, BigInteger $idSeguido){
+    public function unfollowUsuario(Request $request, int $idSeguido){
         $idUsuario = Usuario::find($request->user()->id);
         $seguido = Follower::where('idSeguido', $idSeguido)->where('idSeguidor', $idUsuario)->delete();
         return response()->json([

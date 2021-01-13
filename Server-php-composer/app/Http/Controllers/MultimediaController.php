@@ -31,7 +31,8 @@ class MultimediaController extends Controller
 
     }
 
-    public function subirFotoPost (Request $request, Post $post){
+    /*
+    public function subirFotoPost (Request $request, int $idpost){
         $rules = [
             'ruta'=>'required|image'
         ];
@@ -40,6 +41,7 @@ class MultimediaController extends Controller
         if ($request->hasFile("ruta")) {
             $multimedia = new Multimedia();
             $multimedia->ruta = $request->file('ruta')->store();
+            $post=Post::find($idpost);
             $post->idMultimedia = $multimedia->id;
 
             $multimedia->save();
@@ -47,6 +49,7 @@ class MultimediaController extends Controller
 
         }
     }
+    */
 
 
 

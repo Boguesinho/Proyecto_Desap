@@ -36,7 +36,7 @@ class CuentaController extends Controller
         ]);
     }
 
-    public function edit(Request $request, Cuenta $cuenta){
+    public function edit(Request $request, int $idcuenta){
         $rules = [
             'nombre' => 'required|string',
             'apellidos' => 'required|string',
@@ -47,7 +47,7 @@ class CuentaController extends Controller
         $this->validate($request, $rules);
 
         //$cuenta->update($request->all());
-        //$cuenta->idUsuario = Auth::user()->id;
+        $cuenta = CuentaController::find($idcuenta);
         $cuenta->idUsuario = $request->user()->id;
         $cuenta->nombre = $request->input('nombre');
         $cuenta->apellidos = $request->input('apellidos');

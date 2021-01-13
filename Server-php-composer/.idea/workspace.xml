@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d15eb94a-fd80-4f33-82b1-e6195b8eaf3a" name="Default Changelist" comment="">
+    <list default="true" id="b6273f8c-8cb7-4807-b87b-e5c613b01ffa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FollowerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FollowerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -11,16 +17,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="composer.json" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -138,19 +137,16 @@
       <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1mUJykvtydvdjx8wretjjSdYv1y" />
+  <component name="ProjectId" id="1n09kOG3CYAv0yYf6h1M8HxMITD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -162,23 +158,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d15eb94a-fd80-4f33-82b1-e6195b8eaf3a" name="Default Changelist" comment="" />
-      <created>1609542521311</created>
+      <changelist id="b6273f8c-8cb7-4807-b87b-e5c613b01ffa" name="Default Changelist" comment="" />
+      <created>1610516294917</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609542521311</updated>
-      <workItem from="1609542557689" duration="7044000" />
-      <workItem from="1609643693719" duration="951000" />
-      <workItem from="1609645021548" duration="7607000" />
-      <workItem from="1609725357742" duration="7161000" />
-      <workItem from="1609968070749" duration="28448000" />
-      <workItem from="1610045483986" duration="16025000" />
-      <workItem from="1610134449438" duration="15067000" />
-      <workItem from="1610238967051" duration="14069000" />
-      <workItem from="1610313246663" duration="2844000" />
-      <workItem from="1610333903631" duration="9131000" />
-      <workItem from="1610419946924" duration="4522000" />
-      <workItem from="1610508510032" duration="4404000" />
+      <updated>1610516294917</updated>
+      <workItem from="1610516305717" duration="1519000" />
     </task>
     <servers />
   </component>
