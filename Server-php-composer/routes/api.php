@@ -49,6 +49,8 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('{idMultimedia}/createPost', [PostController::class, 'createPost']);
     Route::put('{idMultimedia}/{post}/editPost', [PostController::class, 'editPost']);
     Route::delete('{post}/deletePost', [PostController::class, 'deletePost']);
+    Route::get('misPosts',[PostController::class,'misPosts']);
+    Route::get('getPostSeguidos', [PostController::class, 'getPostSeguidos']);
 
 
     //Multimedia

@@ -7,15 +7,20 @@ use App\Models\Post;
 use App\Models\Usuario;
 use Brick\Math\BigInteger;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-    public function getPosts(BigInteger $idSeguido){
-
+    public function getPostSeguidos (Request $request){
+        $logeado = $request->user()->id;
+        $post = Post::whereIn('idUsuario', DB::table('followers')->selectRaw('idSeguido as idUsuario')->where('idSeguidor', $logeado))
+            ->orderBy('updated_at', 'desc')->get();
+        return response()->json($post);
     }
 
     public function misPosts(Request $request){
-
+        $posts = Post::where('idUsuario', $request->user()->id)->get();
+        return response()->json($posts);
     }
 
     public function createPost(Request $request, BigInteger $idMultimedia){
