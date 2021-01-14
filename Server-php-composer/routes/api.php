@@ -20,7 +20,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::post('logout',[UsuarioController::class, 'logout']); //Cerrar sesión
 
     //HomeController
-    Route::get('home', [HomeController::class, "index"]);
     Route::get('{username}/buscarUsuario', [HomeController::class, 'buscarUsuario']);
     Route::get('{idUsuario}/mostrarCuenta', [HomeController::class, 'mostrarCuenta']);
 
@@ -51,12 +50,13 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::delete('{idPost}/deletePost', [PostController::class, 'deletePost']);
     Route::get('misPosts',[PostController::class,'misPosts']);
     Route::get('getPostSeguidos', [PostController::class, 'getPostSeguidos']);
+    Route::get('getPostsCount', [PostController::class, 'getPostsCount']);
 
 
     //Multimedia
     Route::post('subirFotoPerfil', [MultimediaController::class, 'subirFotoPerfil']);
 
-    //Route::post('{post}/subirFotoPost', [MultimediaController::class, 'subirFotoPost']);
+    //
 
 
 });

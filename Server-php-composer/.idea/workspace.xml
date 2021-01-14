@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b6273f8c-8cb7-4807-b87b-e5c613b01ffa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ComentarioController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FollowerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FollowerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LikeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -17,7 +13,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -147,6 +143,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -163,7 +160,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610516294917</updated>
-      <workItem from="1610516305717" duration="1519000" />
+      <workItem from="1610516305717" duration="3374000" />
+      <workItem from="1610575189128" duration="2218000" />
+      <workItem from="1610655228499" duration="5701000" />
     </task>
     <servers />
   </component>

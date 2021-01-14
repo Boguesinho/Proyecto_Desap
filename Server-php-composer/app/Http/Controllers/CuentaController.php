@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cuenta;
+use App\Models\Multimedia;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,6 +23,7 @@ class CuentaController extends Controller
 
         $cuenta = new Cuenta();
         $cuenta->idUsuario = $request->user()->id;
+        $cuenta->idMultimedia= null;
         $cuenta->nombre = $request->input('nombre');
         $cuenta->apellidos = $request->input('apellidos');
         $cuenta->email = $request->input('email');
@@ -45,6 +47,8 @@ class CuentaController extends Controller
             'genero' => 'required|string'
         ];
         $this->validate($request, $rules);
+
+
 
         //$cuenta->update($request->all());
         $cuenta = CuentaController::find($idcuenta);

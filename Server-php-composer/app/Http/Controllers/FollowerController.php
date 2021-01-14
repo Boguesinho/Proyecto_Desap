@@ -12,12 +12,12 @@ class FollowerController extends Controller
 
     public function getSeguidores(Request $request){
         $seguidores = Usuario::find($request->user()->id);
-        return $seguidores->seguidores;
+        return $seguidores->seguidores->count();
 
     }
     public function getSeguidos(Request $request){
         $seguidos = Usuario::find($request->user()->id);
-        return $seguidos->seguidos;
+        return $seguidos->seguidos->count();
     }
 
     public function seguirUsuario(Request $request, int $idSeguido){

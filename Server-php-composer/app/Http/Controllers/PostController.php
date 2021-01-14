@@ -24,6 +24,11 @@ class PostController extends Controller
         return response()->json($posts);
     }
 
+    public function getPostsCount(Request $request){
+        $posts = Post::where('idUsuario', $request->user()->id)->get();
+        return response()->json($posts->count());
+    }
+
     public function createPost(Request $request){
         $rules = [
             'descripcion'=>'required|string',
