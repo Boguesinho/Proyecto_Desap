@@ -55,5 +55,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     //Multimedia
     Route::post('subirFotoPerfil', [MultimediaController::class, 'subirFotoPerfil']);
     Route::get('getFotoPerfil', [MultimediaController::class, 'getFotoPerfil']);
+    Route::get('{idPost}/getImagenPost', [MultimediaController::class, 'getImagenPost']);
 
 });

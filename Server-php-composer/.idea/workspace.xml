@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b6273f8c-8cb7-4807-b87b-e5c613b01ffa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CuentaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/FollowerSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FollowerSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MultimediaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MultimediaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/PostSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PostSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -162,7 +173,7 @@
       <workItem from="1610516305717" duration="3374000" />
       <workItem from="1610575189128" duration="2218000" />
       <workItem from="1610655228499" duration="11177000" />
-      <workItem from="1610678864746" duration="7946000" />
+      <workItem from="1610678864746" duration="13170000" />
     </task>
     <servers />
   </component>

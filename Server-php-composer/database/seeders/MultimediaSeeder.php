@@ -18,5 +18,13 @@ class MultimediaSeeder extends Seeder
         $multimedia->ruta = 'public/storage/profile/test1.jpg';
         $multimedia->save();
 
+        $multimedia = new Multimedia();
+        $multimedia->ruta = 'public/storage/profile/test2.jpg';
+        $multimedia->save();
+
+        $multimedia = new Multimedia();
+        $multimedia->ruta = 'public/storage/profile/test3.jpg';
+        $multimedia->save();
+
     }
 }

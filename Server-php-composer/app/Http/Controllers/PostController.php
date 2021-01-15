@@ -13,9 +13,8 @@ class PostController extends Controller
 {
     public function getPostSeguidos (Request $request){
         $logeado = $request->user()->id;
-        $post = Post::whereIn('idUsuario', DB::table('followers')->selectRaw('idSeguido as idUsuario')->where('idSeguidor', $logeado))
+        $posts = Post::whereIn('idUsuario', DB::table('followers')->selectRaw('idSeguido as idUsuario')->where('idSeguidor', $logeado))
             ->orderBy('updated_at', 'desc')->get();
-        return response()->json($post);
     }
 
     public function misPosts(Request $request){

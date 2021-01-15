@@ -50,4 +50,10 @@ class MultimediaController extends Controller
         $imagen = Multimedia::find($cuenta->idMultimedia)->first();
         return $imagen->ruta;
     }
+
+    public function getImagenPost(int $idMultimedia){
+        $imagen = Multimedia::find($idMultimedia);
+        return $imagen->ruta;
+    }
+
 }

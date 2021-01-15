@@ -35,7 +35,7 @@ class FollowerSeeder extends Seeder
         $follower->save();
 
         $follower=new Follower();
-        $follower->idSeguidor = 2;
+        $follower->idSeguidor = 1;
         $follower->idSeguido = 3;
         $follower->save();
     }
