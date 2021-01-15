@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b6273f8c-8cb7-4807-b87b-e5c613b01ffa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MultimediaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/FollowerSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FollowerSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/MultimediaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MultimediaSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/PostSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/PostSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +167,8 @@
       <workItem from="1610516305717" duration="3374000" />
       <workItem from="1610575189128" duration="2218000" />
       <workItem from="1610655228499" duration="11177000" />
-      <workItem from="1610678864746" duration="13170000" />
+      <workItem from="1610678864746" duration="15713000" />
+      <workItem from="1610734416200" duration="722000" />
     </task>
     <servers />
   </component>

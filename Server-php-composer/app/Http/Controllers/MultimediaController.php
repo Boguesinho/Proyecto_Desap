@@ -34,7 +34,6 @@ class MultimediaController extends Controller
             else{
                 $multimedia = Multimedia::find($cuenta->idMultimedia);
                 Storage::delete($multimedia->ruta);
-                $multimedia->ruta->delete();
                 $multimedia->ruta = $request->file('ruta')->store('public/imagen');
                 $multimedia->save();
                 return response()->json([
