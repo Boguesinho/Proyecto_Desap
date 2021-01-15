@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+    use App\Models\Cuenta;
     use App\Models\Usuario;
     use Illuminate\Http\Request;
     use Illuminate\Support\Facades\Hash;
@@ -46,7 +47,13 @@ class UsuarioController extends Controller
     {
             $validator = Validator::make($request->all(), [
             'username' => 'required|string|max:255',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6',
+                'nombre' => 'required|string',
+                'apellidos' => 'required|string',
+                'email' => 'required|email|unique:cuentas',
+                'telefono' => 'required|max:10',
+                'genero' => 'required|string',
+                'info' => 'string'
         ]);
 
         if($validator->fails()){
@@ -58,9 +65,26 @@ class UsuarioController extends Controller
             'password' => Hash::make($request->get('password')),
         ]);
 
+        $rules = [
+
+        ];
+        $this->validate($request, $rules);
+
+        $cuenta = new Cuenta();
+        $cuenta->idUsuario = $user->id;
+        $cuenta->idMultimedia= null;
+        $cuenta->nombre = $request->input('nombre');
+        $cuenta->apellidos = $request->input('apellidos');
+        $cuenta->email = $request->input('email');
+        $cuenta->telefono = $request->input('telefono');
+        $cuenta->genero = $request->input('genero');
+        $cuenta->info = $request->input('info');
+
+        $cuenta->save(); //INSERT
+
         $token = JWTAuth::fromUser($user);
 
-        return response()->json(compact('user','token'),201);
+        return response()->json(compact('user','cuenta', 'token'),201);
     }
     public function logout(){
 

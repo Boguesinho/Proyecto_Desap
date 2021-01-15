@@ -16,12 +16,11 @@ Route::post('register', [UsuarioController::class, 'register']);    // registro 
 Route::post('login', [UsuarioController::class, 'authenticate']); //login
 
 Route::group(['middleware' => ['jwt.verify']], function() {
-    Route::post('register/cuenta',[CuentaController::class, 'create']);   //Registrar cuenta
+    //Route::post('register/cuenta',[CuentaController::class, 'create']);   //Registrar cuenta
     Route::post('logout',[UsuarioController::class, 'logout']); //Cerrar sesión
 
     //HomeController
     Route::get('{username}/buscarUsuario', [HomeController::class, 'buscarUsuario']);
-    Route::get('{idUsuario}/mostrarCuenta', [HomeController::class, 'mostrarCuenta']);
 
     //Cuenta
     Route::get('/getCuenta',[CuentaController::class, 'getCuenta']);
