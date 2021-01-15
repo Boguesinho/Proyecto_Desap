@@ -67,8 +67,8 @@ class CuentaController extends Controller
     }
 
         public function getCuenta (Request $request){
-            $idUsuario = Usuario::find($request->user()->id);
+            $idUsuario = $request->user()->id;
             $cuenta = Cuenta::where('idUsuario', $idUsuario)->first();
-            return response()->json($cuenta);
+            return $cuenta;
         }
 }

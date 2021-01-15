@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Follower;
+
 use App\Models\Multimedia;
 use App\Models\Post;
-use App\Models\Usuario;
-use Brick\Math\BigInteger;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -32,7 +31,7 @@ class PostController extends Controller
     public function createPost(Request $request){
         $rules = [
             'descripcion'=>'required|string',
-            'ruta'=>'required|image'
+            'ruta'=>'required|image|mimes:jpeg,png,jpg|max:2048'
         ];
         $this->validate($request, $rules);
 
@@ -40,9 +39,10 @@ class PostController extends Controller
         $post->idUsuario = $request->user()->id;
         $post->descripcion = $request->input('descripcion');
 
+        //Agregar multimedia
         if ($request->hasFile("ruta")) {
             $multimedia = new Multimedia();
-            $multimedia->ruta = $request->file('ruta')->store();
+            $multimedia->ruta = $request->file('ruta')->store('public/imagen');
             $multimedia->save();
         }
 
@@ -57,17 +57,22 @@ class PostController extends Controller
     public function editPost(Request $request, int $idpost){
         $rules = [
             'descripcion'=>'required|string',
-            'ruta'=>'required|image'
+            'ruta'=>'required|image|mimes:jpeg,png,jpg|max:2048'
         ];
         $this->validate($request, $rules);
 
         $post=Post::find($idpost);
-        $post->idUsuario = $request->user()->id;
+        //$post->idUsuario = $request->user()->id;
         $post->descripcion = $request->input('descripcion');
         if ($request->hasFile("ruta")) {
             $multimedia = Multimedia::find($post->idMultimedia);
-            $multimedia->ruta = $request->file('ruta')->store();
+            if(Storage::exists($multimedia->ruta)){
+                Storage::delete($multimedia->ruta);
+                $multimedia->ruta->delete();
+            }
+            $multimedia->ruta = $request->file('ruta')->store('public/imagen');
             $multimedia->save();
+
         }
         $post->idMultimedia = $multimedia->id;
         $post->save();
@@ -79,7 +84,15 @@ class PostController extends Controller
 
     public function deletePost(int $idpost){
         $post=Post::find($idpost);
-        $post->delete();
+        $multimedia = Multimedia::find($post->idMultimedia);
+        if(Storage::exists($multimedia->ruta)){
+            $post->delete();
+            Storage::delete($multimedia->ruta);
+            $multimedia->delete();
+        }
+
+
+
         return response()->json([
             'message' => 'Post eliminado con éxito'
         ]);
