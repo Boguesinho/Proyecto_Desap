@@ -17,7 +17,8 @@ class CuentaController extends Controller
             'apellidos' => 'required|string',
             'email' => 'required|email|unique:cuentas',
             'telefono' => 'required|max:10',
-            'genero' => 'required|string'
+            'genero' => 'required|string',
+            'info' => 'string'
         ];
         $this->validate($request, $rules);
 
@@ -38,31 +39,21 @@ class CuentaController extends Controller
         ]);
     }
 
-    public function edit(Request $request, int $idcuenta){
+    public function editInfo(Request $request){
         $rules = [
-            'nombre' => 'required|string',
-            'apellidos' => 'required|string',
-            'email' => 'required|email|unique:usuarios',
-            'telefono' => 'required|max:10',
-            'genero' => 'required|string'
+            'info' => 'required|string'
         ];
         $this->validate($request, $rules);
 
+        $idUsuario = $request->user()->id;
 
+        $cuenta = Cuenta::where('idUsuario', $idUsuario)->first();
 
-        //$cuenta->update($request->all());
-        $cuenta = CuentaController::find($idcuenta);
-        $cuenta->idUsuario = $request->user()->id;
-        $cuenta->nombre = $request->input('nombre');
-        $cuenta->apellidos = $request->input('apellidos');
-        $cuenta->email = $request->input('email');
-        $cuenta->telefono = $request->input('telefono');
-        $cuenta->genero = $request->input('genero');
         $cuenta->info = $request->input('info');
         $cuenta->save(); //UPDATE
 
         return response()->json([
-            'message' => 'Cuenta editada con éxito'
+            'message' => 'Info editada con éxito'
         ]);
     }
 
