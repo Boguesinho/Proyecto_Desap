@@ -52,7 +52,6 @@ Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('getPostSeguidos', [PostController::class, 'getPostSeguidos']);
     Route::get('getPostsCount', [PostController::class, 'getPostsCount']);
 
-
     //Multimedia
     Route::post('subirFotoPerfil', [MultimediaController::class, 'subirFotoPerfil']);
 
